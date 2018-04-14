@@ -1,0 +1,6 @@
+aiohttp==2.3.10
+async-timeout==2.0.1
+asyncio==3.4.3
+multidict==4.1.0
+pycodestyle==2.4.0
+pyflakes==1.6.0
