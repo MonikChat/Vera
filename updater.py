@@ -8,15 +8,11 @@ import aiohttp
 import asyncio
 import async_timeout
         
-async def request(url, json=query):
+async def request(url: str, query: dict): 
     async with async_timeout.timeout(20):
-      async with aiohttp.ClientSession() as session:
-         try:
-          json.loads(query)
-         except ValueError:
-          print('query parameter not valid JSON')
-         else:
-          async with session.post(url, query)
+        async with aiohttp.ClientSession() as session:
+            async with session.post(url, json=query):
+                return response.text()
 
 def main():
     #TODO: finish all query funcs and complete this.
