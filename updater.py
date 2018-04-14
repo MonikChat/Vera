@@ -8,7 +8,7 @@ import aiohttp
 import asyncio
 import async_timeout
         
-async def request(url, query):
+async def request(url, json=query):
     async with async_timeout.timeout(20):
       async with aiohttp.ClientSession() as session:
          try:
